@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+@import "vars";
+
+body {
+    background-color: #08101e;
+}
+
+@import "header";
+
+@mixin txt ($fos, $lh, $fs, $fw, $tc, $op)
+ {
+    font-style: $fos;
+    line-height: $lh;
+    font-size: $fs;
+    font-weight: $fw;
+    color: $tc;
+    opacity: $op;
+}
+@mixin titl ($fos, $lh, $fs, $fw, $tc)
+{   
+    font-style: $fos;
+    line-height: $lh;
+    font-size: $fs;
+    font-weight: $fw;
+    color: $tc;
+}
+
+.margin{
+    display: flex;
+    justify-content: space-between
+}
+
+
+
+.container {
+    width: 1146px;
+    margin: 0 auto;
+
+}
+
+.menu_link {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding: 40px 20px;
+    &_bd{
+        border: 3px solid rgb(211, 233, 19)
+    }
+    &_red{
+        background-color: red;
+    }
+    &_purple{
+    background-color:#a4307f;
+    }
+    transition: all 1s;
+    
+}
+
+.menu_link:hover{
+    background-color: $button-color-bg;
+    border-radius: 10px;
+    transform: translate(0px, 100px) scale(2);
+    
+}
+
+.content {
+    font-family: "Open Sans", sans-serif;
+}
+
+.title1 {
+    @include titl(normal, 160%, 18px, 600, #3A68B8);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.heading {
+    @include titl(normal, 130%, 55px, 800, #FFFFFF);
+    margin-bottom: 40px;
+}
+
+.text_content {
+    @include txt(normal, 160%, 18px, 600, #FFFFFF, 0.7);
+    margin-bottom: 50px;
+}
+.flex_but{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;  
+}
+
+
+.index_button {
+    width: 217px;
+    background: $button-color-bg;
+    border-radius: 5px;
+    padding: 15px 30px;
+    gap: 10px;
+    background: #3A68B8;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #FFFFFF;
+    &_bd{
+        border: 3px solid rgb(211, 233, 19)
+    }
+    &_red{
+        background-color: red;
+    }
+    &_grun{
+    background-color:#0cd226;
+    }
+    transition: all 1s;
+    
+    
+}
+
+.index_button:hover{
+    color: #3A68B8;
+    background-color: #FFF;
+    transform: translate(10px, 100px) rotate(360deg);
+    
+} 
+@keyframes myAnime{
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+    10% {
+        margin-left: 30px;
+    }
+    20% {
+        transform: scale(2);
+    }
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+
+.logos {
+    margin-top: 200px;
+    font-family: "Open Sans", sans-serif;
+
+}
+
+.header_menu {
+    display: flex;
+    justify-content: center;
+}
+
+.flex_box {
+    @extend .margin
+}
+
+.content_left {
+    width: 604px;
+}
+
+.content_maxinfo {
+    margin-top: 150px;
+    margin-bottom: 264px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.content_text {
+    @include txt(normal, 160%, 16px, 600, #FFFFFF, 0.7);
+    
+}
+
+.right_content {
+    padding: 30px;
+}
+
+.flex_content {
+    display: flex;
+    align-content: stretch;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.new_new_block {
+    font-family: "Open Sans", sans-serif;
+}
+
+.item {
+    width: 362px;
+    background: #132035;
+    border-radius: 10px;
+    text-align: center;
+    padding: 30px;
+    
+}
+
+.title2 {
+    @include titl(normal, 130%, 40px, 700, #FFFFFF);
+    animation: myAnime 2s ease 0s infinite normal forwards;
+    
+}
+
+.title3 {
+
+    @include titl(normal, 125%, 25px, 700, #FFFFFF);
+    text-align: center;
+    opacity: 0.7;
+    margin-top: 30px;
+    animation: myAnime 3s ease 0s infinite normal forwards;
+}
+
+.content_block {
+    @include txt(normal, 160%, 16px, 600, #FFFFFF, 0.7);
+    text-align: center;
+    margin-top: 30px;
+}
+
+.left_content_new {
+    width: 754px;
+    background: #132035;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.right_content_new {
+    margin-top: 30px;
+}
+
+.flex_content_block {
+    @extend .margin;
+    align-items: stretch;
+}
+
+.margin_bott {
+    margin-bottom: 30px;
+}
+
+.new_new_block {
+    margin-top: 221px;
+}
+
+.content_block_new {
+    @include txt(normal, 160%, 16px, 600, #FFFFFF, 0.7);
+    margin-right: 113px;
+    padding-bottom: 25px;
+
+}
+
+.title21 {
+    @include titl(normal, 130%, 40px, 700, #FFFFFF);
+    margin-right: 25px;
+    padding-bottom: 40px;
+}
+
+.title_footer {
+    @include titl(normal, 19px, 16px, 500, #FFFFFF);
+    margin-bottom: 33px;
+    margin-top: 48px;
+}
+
+.title6 {
+    @include titl(normal, 16px, 14px, 500, #FFFFFF);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-bottom: 24px;
+}
+
+.footer_text {
+    @include txt(italic, 16px, 14px, 100, #FFFFFF, 0.6);
+    width: 261px;
+}
+
+@import "footer";
+
+
+.information {
+    display: flex;
+    margin-top: 33px;
+}
+
+.icon_block {
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.footer_new_block {
+    @extend .margin;
+    flex-direction: column;
+    height: 92px;
+    margin-right: 5px;
+}
+
+.fa,
+.fas {
+    color: #FFFFFF;
+}
